@@ -6,9 +6,7 @@ export const Item = styled.div`
     padding: 50px 5%;
     color: white;
     overflow: hidden;
-`;
-export const Inner = styled.div`
-    display: flex;
+
     flex-direction: ${({ direction }) => direction};
     align-items: center;
     justify-content: space-between;
