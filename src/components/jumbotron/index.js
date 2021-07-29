@@ -1,16 +1,16 @@
 import React from "react";
 import { Container, Item, Pane, Title, SubTitle, Image } from "./styles/jumbotron";
 
-export default function Jumbotron({ item, ...restProps }) {
+export default function Jumbotron({ item,...restProps }) {
     return (
-        <Item direction={item.direction || "row"} {...restProps}>
-            <Jumbotron.Pane>
-                <Jumbotron.Title>{item.title}</Jumbotron.Title>
-                <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
-            </Jumbotron.Pane>
-            <Jumbotron.Pane>
-                <Jumbotron.Image src={item.image} alt={item.alt} />
-            </Jumbotron.Pane>
+        <Item direction={item.direction} {...restProps}>
+                    <Jumbotron.Pane>
+                        <Jumbotron.Title>{item.title}</Jumbotron.Title>
+                        <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
+                    </Jumbotron.Pane>
+                    <Jumbotron.Pane>
+                        <Jumbotron.Image src={item.image} alt={item.alt} />
+                    </Jumbotron.Pane>
         </Item>
     );
 }
