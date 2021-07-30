@@ -1,7 +1,7 @@
 import React from 'react';
 import {Break, Button, Container, Input, Text} from "./styles/opt-form";
 
-export default function OptForm({children, ...restProps}) {
+export default function OptForm({...restProps}) {
     return (
         <Container {...restProps}>
             <OptForm.Input placeholder="Email address"/>
