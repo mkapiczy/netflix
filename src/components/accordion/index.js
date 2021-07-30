@@ -3,7 +3,7 @@ import {Body, Container, Header, Item, Title} from "./styles/accordion";
 
 const ToggleContext = createContext();
 
-export default function Accordion({data, ...restProps}) {
+export default function Accordion({data, children, ...restProps}) {
     return (
         <Container {...restProps}>
             <Title>Frequently Asked Questions</Title>
@@ -13,7 +13,7 @@ export default function Accordion({data, ...restProps}) {
                     <Accordion.Body>{item.body}</Accordion.Body>
                 </Accordion.Item>
             ))}
-            <Accordion.Item/>
+            {children}
         </Container>
     );
 }
